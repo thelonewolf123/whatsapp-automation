@@ -3,12 +3,13 @@
 import sys
 import pandas as pd
 
+from termcolor import colored
 from selenium import webdriver 
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 
-message = "Hello It's automated text."
+message = "Hello It's automated text testing."
 
 if(len(sys.argv) == 2):
 
@@ -23,12 +24,14 @@ if(len(sys.argv) == 2):
 	#print(contacts)
 
 	for item in name:
+		
 		searchbox = browser.find_element_by_class_name('selectable-text')
 		searchbox.send_keys(item)
 		sleep(3)
 		
 		try:
-			print(item)
+			text = colored(f'Whatsapp message has been sent for {item[0]}','green')
+			print(text)
 			elmn = browser.find_element_by_xpath(f'//span[@title = "{item[0]}" ]')
 			elmn.click()
 			inputBox = browser.find_element_by_class_name('_3u328')
@@ -39,10 +42,12 @@ if(len(sys.argv) == 2):
 		
 		except Exception:
 			#print('Error')
-			print('\n')
+			text = colored(f'Whatsapp account is not available for {item[0]}','red')
+			print(text)
 		
 		searchbox.send_keys(Keys.CONTROL,'a')
 		searchbox.send_keys(Keys.BACKSPACE)
 
 else:
-	print(f'Usage : {sys.argv[0]} path/to/file.csv')
+	text = colored(f'Usage : {sys.argv[0]} /path/to/file.csv','red')
+	print(text)
