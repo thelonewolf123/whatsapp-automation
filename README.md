@@ -13,7 +13,7 @@ To use this script first you have to install selenium, chrome webdriver, and pan
   
     sudo pip3 install Selenium pandas
 
-    sudo apt install chromium chromium-webdriver
+    sudo apt install chromium chromium-driver
   
 to run this script,
 
