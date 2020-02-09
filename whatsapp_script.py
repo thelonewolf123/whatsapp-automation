@@ -45,4 +45,4 @@ if(len(sys.argv) == 2):
 		searchbox.send_keys(Keys.BACKSPACE)
 
 else:
-	print(f'Usage : {sys.argv[0]}')
+	print(f'Usage : {sys.argv[0]} path/to/file.csv')
