@@ -11,12 +11,12 @@ To use this script first you have to install selenium, chrome webdriver, and pan
 
   For Linux
   
-  sudo pip3 install Selenium pandas
-  
-  sudo apt install chromium chromium-webdriver
+    sudo pip3 install Selenium pandas
+
+    sudo apt install chromium chromium-webdriver
   
 to run this script,
 
-  chmod +x whatsapp_script.py
-  
-  ./whasapp_script.py path/to/file.csv
+    chmod +x whatsapp_script.py
+
+    ./whasapp_script.py path/to/file.csv
