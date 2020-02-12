@@ -30,12 +30,13 @@ if(len(sys.argv) == 2):
 		sleep(3)
 		
 		try:
-			text = colored(f'Whatsapp message has been sent for {item[0]}','green')
-			print(text)
+			
 			elmn = browser.find_element_by_xpath(f'//span[@title = "{item[0]}" ]')
 			elmn.click()
 			inputBox = browser.find_element_by_class_name('_3u328')
 			inputBox.send_keys(f'{message}\n') 
+			text = colored(f'Whatsapp message has been sent for {item[0]}','green')
+			print(text)
 			#sendtext = browser.find_element_by_class_name('_3M-N-')
 			#sendtext.click()
 			sleep(3)
